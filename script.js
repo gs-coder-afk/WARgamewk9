@@ -40,7 +40,7 @@ class Deck {
         ];
     }
 
-// assigning each card to the 4 suits
+// function assigning each card to the 4 suits
 
 createDeck () {
     for (let i = 0; i < this.suits.length; i++) {
@@ -55,7 +55,8 @@ createDeck () {
     }
  } 
 
-// shuffle or randomizing the deck created above
+// function to shuffle or randomizing the deck created 
+// above
 
 shuffleDeck() {
     for (let i = this.deck.length - 1; i > 0; i--) {
@@ -67,7 +68,7 @@ shuffleDeck() {
 
 } 
 
-// Game structuring (or rules) 
+// Game class  (game logic)
 // player names (1 & 2)
 // player score 
 // player hand
@@ -86,17 +87,18 @@ class Game {
     } 
  } 
  
- playGame () { 
-    const deck = new Deck 
- deck.createDeck() 
- deck.shuffleDeck() 
-
 // dealing the deck randomly to both players until 
 // all the cards are dealt 
+// using a loop ...
 // each player plays a card & the values/rank of the 
 // cards are compared & a point is rewarded to the 
 // player with the highest value/rank or a tie is 
 // issued & no points are awarded to either player
+
+ playGame () { 
+    const deck = new Deck 
+ deck.createDeck() 
+ deck.shuffleDeck() 
 
  while (deck.deck.length !== 0) {
     this.player1.hand.push(deck.deck.shift())
